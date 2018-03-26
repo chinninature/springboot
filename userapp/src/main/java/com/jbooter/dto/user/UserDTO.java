@@ -1,4 +1,4 @@
-package com.jbooter.dto;
+package com.jbooter.dto.user;
 
 import java.io.Serializable;
 

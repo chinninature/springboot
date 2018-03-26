@@ -1,8 +1,6 @@
-package com.jbooter.controller;
+package com.jbooter.controller.user;
 
 import java.util.List;
-
-import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,11 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jbooter.dto.UserDTO;
-import com.jbooter.service.UserService;
+import com.jbooter.dto.user.UserDTO;
+import com.jbooter.service.user.UserService;
 
 @RestController
 @RequestMapping("/user")

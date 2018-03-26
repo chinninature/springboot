@@ -1,4 +1,4 @@
-package com.jbooter.domain;
+package com.jbooter.domain.user;
 
 import java.io.Serializable;
 

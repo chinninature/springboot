@@ -1,8 +1,8 @@
-package com.jbooter.service;
+package com.jbooter.service.user;
 
 import java.util.List;
 
-import com.jbooter.dto.UserDTO;
+import com.jbooter.dto.user.UserDTO;
 
 public interface UserService {
 

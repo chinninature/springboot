@@ -1,4 +1,4 @@
-package com.jbooter.service;
+package com.jbooter.service.user;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.jbooter.domain.User;
-import com.jbooter.dto.UserDTO;
-import com.jbooter.repository.UserRepository;
+import com.jbooter.domain.user.User;
+import com.jbooter.dto.user.UserDTO;
+import com.jbooter.repository.user.UserRepository;
 
 @Service("userService")
 
