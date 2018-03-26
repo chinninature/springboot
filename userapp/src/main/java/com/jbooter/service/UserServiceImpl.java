@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.jbooter.Domain.User;
+import com.jbooter.domain.User;
 import com.jbooter.dto.UserDTO;
 import com.jbooter.repository.UserRepository;
 
