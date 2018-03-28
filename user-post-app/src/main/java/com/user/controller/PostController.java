@@ -1,5 +1,6 @@
 package com.user.controller;
-//eclipse
+<<<<<<< HEAD
+//command line
 
 import java.util.List;
 
