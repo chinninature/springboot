@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.user.dto.PostDTO;
 import com.user.service.PostService;
 
+/**
+ * This class help to handle Post CRUD  endpoints.
+ * @author macwork
+ *
+ */
 @Controller
 @RequestMapping("/post")
 public class PostController {
@@ -22,6 +27,10 @@ public class PostController {
 	@Autowired
 	PostService postService;
 
+	/**
+	 * This method will return all posts
+	 * @return List<PostDTO>
+	 */
 	@RequestMapping(value = "/list", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
 	public ResponseEntity<?> getAllPosts() {
 		List<PostDTO> postList = postService.getAllPosts();

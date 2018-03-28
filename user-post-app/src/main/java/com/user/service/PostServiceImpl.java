@@ -81,9 +81,8 @@ public class PostServiceImpl implements PostService {
 	public void updatePost(PostDTO postDto) throws Exception {
 		Post post = postRepository.findByPostId(postDto.getId());
 		if (post == null) {
-			throw new Exception("Employee not found");
+			throw new Exception("Post not found");
 		}
-		post.setId(postDto.getId());
 		post.setName(postDto.getName());
 		post.setDescription(postDto.getDescription());
 		postRepository.save(post);
@@ -94,10 +93,9 @@ public class PostServiceImpl implements PostService {
 	public void deletePost(Long id) throws Exception {
 		Post post = postRepository.findByPostId(id);
 		if (post == null) {
-			throw new Exception("User not found");
+			throw new Exception("Post not found");
 		}
 		postRepository.delete(post);
-
 	}
 
 }

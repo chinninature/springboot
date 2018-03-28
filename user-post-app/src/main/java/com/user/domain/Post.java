@@ -29,7 +29,7 @@ public class Post implements Serializable {
 	@Column
 	private String description;
 
-	@ManyToOne(cascade= CascadeType.ALL)
+	@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinColumn(name="user_id")
 	private User user;
 
