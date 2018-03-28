@@ -1,5 +1,7 @@
 package com.user.controller;
+<<<<<<< HEAD
 //command line
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
