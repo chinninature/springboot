@@ -40,6 +40,10 @@ public class PostController {
 		return new ResponseEntity<List<PostDTO>>(postList, HttpStatus.OK);
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	@RequestMapping(value = "/list_name", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
 	public ResponseEntity<?> getAllPostsWithUserName() {
 		List<PostDTO> postList = postService.getAllPostsWithUserName();
