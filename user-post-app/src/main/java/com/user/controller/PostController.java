@@ -21,6 +21,7 @@ import com.user.service.PostService;
  * @author macwork
  *
  */
+
 @Controller
 @RequestMapping("/post")
 public class PostController {
