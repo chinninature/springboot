@@ -1,5 +1,4 @@
 package com.user.controller;
-<<<<<<< HEAD
 //command line
 
 import java.util.List;

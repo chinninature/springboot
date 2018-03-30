@@ -8,5 +8,9 @@ public interface QuestionService {
 
 	List<QuestionDTO> getAllQuestionsWithAnswers();
 	
+	void saveQuestionsWithAnswersTopics(QuestionDTO questionDto);
+
+	void saveAnswerWithQuestionId(QuestionDTO questionDto, Long id);
+	
 
 }

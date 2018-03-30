@@ -1,7 +1,7 @@
 package com.questionanswer.domain;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -32,11 +32,20 @@ public class Topic implements Serializable {
 	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.ALL })
 	@JoinTable(name = "QUESTIONS_TOPICS", joinColumns = { @JoinColumn(name = "topic_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "question_id") })
-	private List<Question> questions;
+	private Set<Question> questions;
 
 	public Topic() {
 		super();
 	}
+	
+	
+
+	public Topic(String topicName) {
+		super();
+		this.topicName = topicName;
+	}
+
+
 
 	public Topic(Long topicId, String topicName) {
 		super();
@@ -44,7 +53,7 @@ public class Topic implements Serializable {
 		this.topicName = topicName;
 	}
 
-	public Topic(Long topicId, String topicName, List<Question> questions) {
+	public Topic(Long topicId, String topicName, Set<Question> questions) {
 		super();
 		this.topicId = topicId;
 		this.topicName = topicName;
@@ -67,11 +76,11 @@ public class Topic implements Serializable {
 		this.topicName = topicName;
 	}
 
-	public List<Question> getQuestions() {
+	public Set<Question> getQuestions() {
 		return questions;
 	}
 
-	public void setQuestions(List<Question> questions) {
+	public void setQuestions(Set<Question> questions) {
 		this.questions = questions;
 	}
 

@@ -2,8 +2,10 @@ package com.questionanswer.domain;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -30,11 +32,11 @@ public class Question implements Serializable {
 	@Column(name = "date")
 	private Date date;
 
-	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions")
-	private List<Answer> answers;
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions", cascade= CascadeType.PERSIST)
+	private Set<Answer> answers;
 
-	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions")
-	private List<Topic> topics;
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "questions" , cascade= CascadeType.PERSIST)
+	private Set<Topic> topics;
 
 	public Question() {
 		super();
@@ -45,6 +47,15 @@ public class Question implements Serializable {
 		this.qsId = qsId;
 		this.qsString = qsString;
 		this.date = date;
+	}
+	
+	public Question(Long qsId, String qsString, Date date, Set<Answer> answers, Set<Topic> topics) {
+		super();
+		this.qsId = qsId;
+		this.qsString = qsString;
+		this.date = date;
+		this.answers = answers;
+		this.topics = topics;
 	}
 
 	public Long getQsId() {
@@ -71,19 +82,19 @@ public class Question implements Serializable {
 		this.date = date;
 	}
 
-	public List<Answer> getAnswers() {
+	public Set<Answer> getAnswers() {
 		return answers;
 	}
 
-	public void setAnswers(List<Answer> answers) {
+	public void setAnswers(Set<Answer> answers) {
 		this.answers = answers;
 	}
 
-	public List<Topic> getTopics() {
+	public Set<Topic> getTopics() {
 		return topics;
 	}
 
-	public void setTopics(List<Topic> topics) {
+	public void setTopics(Set<Topic> topics) {
 		this.topics = topics;
 	}
 

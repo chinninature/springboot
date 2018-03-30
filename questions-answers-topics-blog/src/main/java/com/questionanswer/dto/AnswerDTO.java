@@ -11,6 +11,15 @@ public class AnswerDTO {
 	public AnswerDTO() {
 		super();
 	}
+	
+	
+
+	public AnswerDTO(String ansString) {
+		super();
+		this.ansString = ansString;
+	}
+
+
 
 	public AnswerDTO(Long ansId, String ansString) {
 		super();
